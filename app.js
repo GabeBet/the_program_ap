@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const PORT = process.env.PORT || 4000;
+// const PORT = process.env.PORT || 4000;
 require('dotenv/config')
 
 //Middlewares
@@ -33,4 +33,4 @@ mongoose.connect(process.env.DB_CONNECTION,
     { useNewUrlParser: true}
 );
 
-app.listen(PORT);
+app.listen(4000);
