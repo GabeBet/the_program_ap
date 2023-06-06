@@ -20,6 +20,9 @@ const sqFtRoutes = require('./routes/squarefootage');
 const estimateRoutes = require('./routes/estimate');
 const invoiceRoutes = require('./routes/invoice');
 const bankStatementRoutes = require('./routes/bankstatement');
+const estInvDescription = require('./routes/estInvDescription');
+const sqftDescription = require('./routes/sqftDescription');
+const projDescription = require('./routes/projDescription');
 
 app.use('/projects',projectRoutes);
 app.use('/customers',customerRoutes);
@@ -27,6 +30,9 @@ app.use('/squarefootage',sqFtRoutes);
 app.use('/estimate',estimateRoutes);
 app.use('/invoice',invoiceRoutes);
 app.use('/bankstatement',bankStatementRoutes);
+app.use('/estInvDescription',estInvDescription);
+app.use('/sqftDescription',sqftDescription);
+app.use('/projDescription',projDescription);
 
 //Connect to DB
 mongoose.connect(process.env.DB_CONNECTION, 
