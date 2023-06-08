@@ -1,25 +1,23 @@
 const mongoose = require('mongoose');
 
 const BankStatementSchema = mongoose.Schema({
+    date: {
+        type: String
+    },
     description: {
-        type: String,
-        required: true
+        type: String
     },
     amount: {
-        type: String,
-        required: true
+        type: String
     },
     debitCredit: {
-        type: String,
-        required: true
+        type: String
     },
     category: {
-        type: String,
-        required: true
+        type: String
     },
     projectNumber: {
-        type: String,
-        required: true
+        type: String
     }
 })
 

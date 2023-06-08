@@ -15,6 +15,7 @@ router.get('/', async (req,res) => {
 //Submits bank statements
 router.post('/', async (req,res) => {
     const bankStatement = new BankStatement({
+        date: req.body.date,
         description: req.body.description,
         amount: req.body.amount,
         debitCredit: req.body.debitCredit,
@@ -55,7 +56,8 @@ router.put('/:bankstatementID', async (req,res) => {
     try{
         const updatedBankStatement = await BankStatement.updateOne(
             {_id: req.params.bankstatementID}, 
-            { $set: { description: req.body.description,
+            { $set: { date: req.body.date,
+                description: req.body.description,
                 amount: req.body.amount,
                 debitCredit: req.body.debitCredit,
                 category: req.body.category,
