@@ -21,6 +21,10 @@ const InvoiceSchema = mongoose.Schema({
         type: Object,
         required: true
     },
+    freeInputFields: {
+        type: Object,
+        required: true
+    },
     subTotal: {
         type: Number,
         required: true
